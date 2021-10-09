@@ -1,4 +1,6 @@
-FROM byrnedo/alpine-curl
+FROM alpine
+
+RUN apk update && apk add --no-cache curl
 
 RUN mkdir /opt/tomcat/
 
