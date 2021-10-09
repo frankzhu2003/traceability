@@ -1,4 +1,4 @@
-FROM alpine
+FROM byrnedo/alpine-curl
 
 RUN mkdir /opt/tomcat/
 
