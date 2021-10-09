@@ -16,7 +16,7 @@ resources:
       sourceArtifactory: {{ .Values.artifactoryIntegration }}
 
 pipelines:
-  - name: traceability-pipeline
+  - name: traceability_pipeline
     steps:
       - name: app_build
         type: DockerBuild
