@@ -2,7 +2,7 @@ template: true   # required for local templates
 valuesFilePath: ./values.yml
 
 resources:
-  - name: app_repo
+  - name: traceability_app_repo
     type: GitRepo
     configuration:
       gitProvider: {{ .Values.gitIntegration }}                      
@@ -10,7 +10,7 @@ resources:
       branches:
         include: master
 
-  - name: app_buildinfo
+  - name: traceability_app_buildinfo
     type: BuildInfo
     configuration:
       sourceArtifactory: {{ .Values.artifactoryIntegration }}
@@ -27,7 +27,7 @@ pipelines:
           dockerImageName: {{ .Values.artifactoryUrl }}/{{ .Values.sourceRepository }}/{{ .Values.imageName }}  
           dockerImageTag: ${run_number}
           inputResources:
-            - name: app_repo
+            - name: traceability_app_repo
           integrations:
             - name: {{ .Values.artifactoryIntegration }}         
             
@@ -48,4 +48,4 @@ pipelines:
           inputSteps:
             - name: app_push
           outputResources:
-            - name: app_buildinfo
+            - name: traceability_app_buildinfo
