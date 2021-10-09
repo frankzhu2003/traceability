@@ -1,7 +1,7 @@
 gitIntegration: myGitRepo
 gitRepositoryPath: frankzhu2003/traceability  # replace jfrog with your username or org name
 artifactoryIntegration: etrainingArtifactory
-imageName: app_docker_image
+imageName: traceability_docker_image
 artifactoryUrl: 10.178.0.17   # replace swampup with your server name
 sourceRepository: traceability-docker-local  
 
