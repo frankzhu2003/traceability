@@ -1,6 +1,6 @@
 FROM ubuntu
 
-RUN apt update && apt add --no-cache curl
+RUN apt update && apt add curl
 
 RUN mkdir /opt/tomcat/
 
